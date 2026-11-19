@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import HeaderBotton from '../../../components/HeaderBottom'
-import HeaderTop from '../../../components/HeaderTop'
+// import HeaderTop from '../../../components/HeaderTop'
 import Breadcumb from '../../../components/Breadcumb'
 import TeamMember from '../../../components/TeamMember'
 import NewsLetter from '../../../components/Newsletter'
@@ -18,8 +18,8 @@ const breadcumbMenu = [
 const TeamPage = () => {
     return (
         <Fragment>
-            <header className="headerArea">
-                <HeaderTop className="headerTop" />
+            <header className="headerArea whiteHeader">
+                {/* <HeaderTop className="headerTop" /> */}
                 <HeaderBotton className="headerBottomArea headerBottomAreaStyelTwo" />
             </header>
             <Breadcumb

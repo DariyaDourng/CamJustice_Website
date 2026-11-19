@@ -1,16 +1,10 @@
 import React, { Fragment } from 'react'
-import { Link } from 'react-router-dom'
 import HeaderBotton from '../../../components/HeaderBottom'
-import HeaderTop from '../../../components/HeaderTop'
+// import HeaderTop from '../../../components/HeaderTop'
 import Breadcumb from '../../../components/Breadcumb'
 import NewsLetter from '../../../components/Newsletter'
 import FooterArea from '../../../components/FooterArea'
-import SearchSidebar from '../../../components/SearchSidebar'
-import CetagorySidebar from '../../../components/CategorySidebar'
-import RecentPosts from '../../../components/RecentPosts'
 import BlogPost from '../../../components/BlogPost'
-import Tags from '../../../components/Tags'
-import Instagram from '../../../components/Instagram'
 // images
 import breadcumb from '../../../images/breadcumb/1.jpg'
 import './style.scss'
@@ -23,8 +17,8 @@ const breadcumbMenu = [
 const BlogFullWidth = () => {
     return (
         <Fragment>
-            <header className="headerArea">
-                <HeaderTop className="headerTop" />
+            <header className="headerArea whiteHeader">
+                {/* <HeaderTop className="headerTop" /> */}
                 <HeaderBotton className="headerBottomArea headerBottomAreaStyelTwo" />
             </header>
             <Breadcumb

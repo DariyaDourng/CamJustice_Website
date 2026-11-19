@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import HeaderBotton from "../../../components/HeaderBottom";
-import HeaderTop from "../../../components/HeaderTop";
+// import HeaderTop from "../../../components/HeaderTop";
 import Breadcumb from "../../../components/Breadcumb";
 import Service from "../../../components/Service";
 import About from "../../../components/About";
@@ -27,8 +27,8 @@ const MENUS = [{ name: "Home", route: "/" }, { name: "About us" }];
 const AboutPage = () => {
   return (
     <Fragment>
-      <header className="headerArea">
-        <HeaderTop className="headerTop" />
+      <header className="headerArea whiteHeader">
+        {/* <HeaderTop className="headerTop" /> */}
         <HeaderBotton className="headerBottomArea headerBottomAreaStyelTwo" />
       </header>
       <Breadcumb

@@ -1,10 +1,13 @@
 .headerArea{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     .headerTop {
         .headerTopMainWrapper{
             border-bottom: 1px solid rgba(255,255,255,.07);
             padding: 10px 0;
         }
-        background: #272c3f;
+        background: #bb7e36;
         ul{
             text-align: right;
             @media (max-width:576px) {
@@ -15,7 +18,7 @@
                 padding: 15px;
                 color: #fff;
                 font-size: 15px;
-                color: #e0e0e0;
+                font-weight: 00;
                 &:first-child{
                     position: relative;
                     padding-left: 0;
@@ -35,8 +38,7 @@
                 }
                 i{
                     padding-right: 10px;
-                    color: #cbbc99;
-                    
+                    color: #fff;
                 }
             }
             &.accountLoginArea{
@@ -67,8 +69,8 @@
                 font-weight: 700;
                 color: #fff;
                 padding: 9px 15px;
-                border: 2px solid #c0b596;
-                border-radius: 47px;
+                border: 1px solid #fff;
+                border-radius: 4px;
                 text-transform: capitalize;
                 @media (max-width:1024px) {
                     font-size: 12px;

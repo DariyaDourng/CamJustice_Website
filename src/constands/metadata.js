@@ -9,6 +9,6 @@ export const META_DATA = {
   telegram: "https://t.me/sn600900",
   logo: "",
   address:
-    "Building No.150, Level 4, Corner St.516 and Samdach Penn Nouth Blvd, Sangkat Boeungkak 1, Khan TuolKok, Phnom Penh",
+    "#17, Street P08, Chipmong Parkland 598, Sangkat Chreang Chomres, Khan Rusey Keo, Phnom Penh., Phnom Penh",
   map: "https://maps.app.goo.gl/9UA78puDLsH5ZnpE8",
 };

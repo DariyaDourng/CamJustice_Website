@@ -6,6 +6,8 @@ import AboutPage from "../Pages/AboutPage";
 import TeamPage from "../Pages/TeamPage";
 import ContactPage from "../Pages/ContactPage";
 import BlogLeftPage from "../Pages/BlogLeftPage";
+import BlogFullWidth from "../Pages/BlogFullWidth";
+import PracticePage from "../Pages/PracticePage";
 import NotFound from "../Pages/NotFound/NotFound";
 import "./App.css";
 
@@ -34,7 +36,9 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePageOne />} />
             <Route path="about" element={<AboutPage />} />
+            <Route path="practice-areas" element={<PracticePage />} />
             <Route path="attorneys" element={<TeamPage />} />
+            <Route path="insights" element={<BlogFullWidth />} />
             <Route path="contact" element={<ContactPage />} />
             <Route path="service" element={<BlogLeftPage />} />
             <Route path="our-service" element={<BlogLeftPage />} />

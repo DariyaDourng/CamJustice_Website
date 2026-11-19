@@ -1,5 +1,5 @@
 .footerArea{
-    background: #151a30;
+    background: #151a30 url(../../images/slider/footer.png) no-repeat center center / cover;
     .footerTopArea{
         padding: 100px 0px 70px;
         .footerLogo{
@@ -36,7 +36,7 @@
                         color: #ddd;
                         display: inline-block;
                         &:hover{
-                            color: #c0b596;
+                            color: #c98a3b;
                         }
                     }
                 }
@@ -72,7 +72,7 @@
                         font-size: 25px;
                         color: #ddd;
                         &:hover{
-                            color: #c0b596;
+                            color: #c98a3b;
                         }
                     }
                 }

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react'
 import HeaderBotton from '../../../components/HeaderBottom'
-import HeaderTop from '../../../components/HeaderTop'
+// import HeaderTop from '../../../components/HeaderTop'
 import HeroSlider from '../../../components/HeroSlider'
 import Service from '../../../components/Service'
 import About from '../../../components/About'
@@ -37,14 +37,14 @@ const heroSliders = [
         title: 'We Fight For Your Justice',
         subTitle: 'As Like A Friend.',
         text: '11The Most Talented Law Frim',
-        button: 'Contact us now'
+        button: 'CONTACT US NOW'
     },
     {
         images: 'slideWrapperTwo',
         title: 'We Fight For Your Justice',
         subTitle: 'As Like A Friend.',
         text: '11The Most Talented Law Frim',
-        button: 'Contact us now'
+        button: 'CONTACT US NOW'
     },
 ]
 
@@ -93,7 +93,7 @@ const HomePageThree = () => {
     return (
         <Fragment>
             <header className="headerArea headerAreaStyleThree">
-                <HeaderTop className="headerTop" />
+                {/* <HeaderTop className="headerTop" /> */}
                 <HeaderBotton className="headerBottomArea" />
             </header>
             <HeroSlider 

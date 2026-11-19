@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from 'react'
 import HeaderBotton from '../../../components/HeaderBottom'
-import HeaderTop from '../../../components/HeaderTop'
+// import HeaderTop from '../../../components/HeaderTop'
 import Breadcumb from '../../../components/Breadcumb'
 import NewsLetter from '../../../components/Newsletter'
 import FooterArea from '../../../components/FooterArea'
@@ -24,8 +24,8 @@ const BlogLeftPage = () => {
 
     return (
         <Fragment>
-            <header className="headerArea">
-                <HeaderTop className="headerTop" />
+            <header className="headerArea whiteHeader">
+                {/* <HeaderTop className="headerTop" /> */}
                 <HeaderBotton className="headerBottomArea headerBottomAreaStyelTwo" />
             </header>
             <Breadcumb

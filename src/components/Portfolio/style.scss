@@ -10,7 +10,7 @@
             color: #333;
             transition: all .3s;
             &:hover{
-                color: #c0b596;
+                color: #c98a3b;
             }
         }
     }
@@ -57,11 +57,11 @@
                     top: 5%;
                     width: 90%;
                     height: 90%;
-                    border: 2px solid #c0b596;
+                    border: 2px solid #c98a3b;
                     content: '',
                 }
                 p{
-                    color: #c0b596;
+                    color: #c98a3b;
                 }
                 h3{
                     color: #fff;
@@ -77,14 +77,14 @@
                         bottom: -30px;
                         width: 60px;
                         height: 3px;
-                        background: #c0b596;
+                        background: #c98a3b;
                         transform: translateX(-50%);
                     }
                 }
             }
             &:hover{
                 .portfolioContent{
-                    background: #c0b596;
+                    background: #c98a3b;
                 }
             }
         }

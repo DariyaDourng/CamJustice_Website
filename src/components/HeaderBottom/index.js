@@ -3,10 +3,58 @@ import { NavLink } from "react-router-dom";
 import logo from "../../images/logo/logo.png";
 import "./style.scss";
 
+const menuItems = [
+  { label: "Home", to: "/", end: true },
+  {
+    label: "About Us",
+    to: "/about",
+    children: [
+      "Our Firm",
+      "Leadership & Values",
+      "BAKC Credentials & Licenses",
+      "International Alliances",
+      "Careers",
+    ],
+  },
+  {
+    label: "Practice Areas",
+    to: "/practice-areas",
+    children: [
+      "Corporate, M&A & Investment",
+      "Real Estate & Construction",
+      "Banking, Finance & FinTech",
+      "Labor & Employment",
+      "Tax & Customs",
+      "Dispute Resolution & Arbitration",
+      "Intellectual Property",
+      "Family, Immigration & Notarial Services",
+    ],
+  },
+  {
+    label: "Our Team",
+    to: "/attorneys",
+  },
+  {
+    label: "Insights",
+    to: "/insights",
+    children: [
+      "Legal Updates & Alerts",
+      "Doing Business in Cambodia Guides",
+      "Firm News & Events",
+    ],
+  },
+  {
+    label: "Contact Us",
+    to: "/contact",
+    children: ["Phnom Penh Office", "Provincial Offices", "Book a Consultation"],
+  },
+];
+
 const HeaderBottom = (props) => {
   const [search, setSearch] = useState();
   const [responsive, setResponsive] = useState(false);
   const [trigger, setTrigger] = useState(false);
+  const [expandedMenu, setExpandedMenu] = useState(null);
   const submitHandler = (e) => {
     e.preventDefault();
     console.log(search);
@@ -17,12 +65,15 @@ const HeaderBottom = (props) => {
   const responsiveHandler = () => {
     setResponsive(!responsive);
   };
+  const toggleSubMenu = (label) => {
+    setExpandedMenu((current) => (current === label ? null : label));
+  };
   return (
     <div className={props.className}>
       <div className="container">
         <div className="headerBottomMainWrapper">
           <div className="row">
-            <div className="col-lg-3 col-md-10 col-sm-6 col-8">
+            <div className="col-lg-2 col-md-10 col-sm-6 col-8">
               <div className="logo">
                 <NavLink to="/">
                   <img style={{ height: "75px" }} src={logo} alt="" />
@@ -32,36 +83,55 @@ const HeaderBottom = (props) => {
             <div
               className={
                 responsive
-                  ? "col-lg-8 responsiveWrapper active"
-                  : "col-lg-8 responsiveWrapper"
+                  ? "col-lg-9 responsiveWrapper active"
+                  : "col-lg-9 responsiveWrapper"
               }
             >
               <ul className="mainMenuWrap">
-                <li>
-                  <NavLink to="/">
-                    Home
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/about">
-                    About
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/our-service">
-                    Our Service
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/attorneys">
-                    Attorneys
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink to="/contact">
-                    Contact
-                  </NavLink>
-                </li>
+                {menuItems.map((item) => (
+                  <li
+                    key={item.label}
+                    className={[
+                      item.children ? "hasSubMenu" : "",
+                      expandedMenu === item.label ? "submenu-open" : "",
+                    ]
+                      .filter(Boolean)
+                      .join(" ")}
+                  >
+                    <NavLink
+                      to={item.to}
+                      end={item.end}
+                      onClick={() => setResponsive(false)}
+                    >
+                      {item.label}
+                    </NavLink>
+                    {item.children && (
+                      <>
+                        <button
+                          type="button"
+                          className="subMenuToggle"
+                          aria-label={`Toggle ${item.label} submenu`}
+                          aria-expanded={expandedMenu === item.label}
+                          onClick={() => toggleSubMenu(item.label)}
+                        >
+                          <i className="fa fa-angle-down" aria-hidden="true" />
+                        </button>
+                        <ul className="subMenu">
+                          {item.children.map((child) => (
+                            <li key={child}>
+                              <NavLink
+                                to={item.to}
+                                onClick={() => setResponsive(false)}
+                              >
+                                {child}
+                              </NavLink>
+                            </li>
+                          ))}
+                        </ul>
+                      </>
+                    )}
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="col-lg-1 col-md-2 col-sm-6 col-4">

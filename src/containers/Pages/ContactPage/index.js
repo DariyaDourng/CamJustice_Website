@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import HeaderBotton from "../../../components/HeaderBottom";
-import HeaderTop from "../../../components/HeaderTop";
+// import HeaderTop from "../../../components/HeaderTop";
 import Breadcumb from "../../../components/Breadcumb";
 import NewsLetter from "../../../components/Newsletter";
 import FooterArea from "../../../components/FooterArea";
@@ -13,8 +13,8 @@ const breadcumbMenu = [{ name: "Home", route: "/" }, { name: "Contact" }];
 const ContactPage = () => {
   return (
     <Fragment>
-      <header className="headerArea">
-        <HeaderTop className="headerTop" />
+      <header className="headerArea whiteHeader">
+        {/* <HeaderTop className="headerTop" /> */}
         <HeaderBotton className="headerBottomArea headerBottomAreaStyelTwo" />
       </header>
       <Breadcumb
@@ -31,8 +31,8 @@ const ContactPage = () => {
               <div className="contactUsInfo">
                 <h3>Office</h3>
                 <p>
-                  Building No.150, Level 4, Corner St.516 and Samdach Penn Nouth
-                  Blvd, Sangkat Boeungkak 1, Khan TuolKok, Phnom Penh
+                  #17, Street P08, Chipmong Parkland 598, Sangkat Chreang
+                  Chomres, Khan Rusey Keo, Phnom Penh., Phnom Penh
                 </p>
                 <h4>Phone</h4>
                 <span>+855 17 872 392</span>

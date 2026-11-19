@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import HeaderBotton from "../../../components/HeaderBottom";
-import HeaderTop from "../../../components/HeaderTop";
+// import HeaderTop from "../../../components/HeaderTop";
 import HeroSlider from "../../../components/HeroSlider";
 import Service from "../../../components/Service";
 import About from "../../../components/About";
@@ -25,24 +25,24 @@ const aboutText = [
 const heroSliders = [
   {
     images: "portfolio_1",
-    title: "Working with You,",
-    subTitle: "Like a Friend, for Legal Excellence.",
-    text: "The Most Talented Law Firm",
-    button: "Contact us now",
+    title: "Working With You for Legal Excellence",
+    description:
+      "We provide clear, dependable legal guidance tailored to your needs, combining practical expertise with a personal, client-first approach.",
+    button: "CONTACT US NOW",
   },
   {
     images: "portfolio_2",
-    title: "We Fight For Your Justice",
-    subTitle: "As Like A Friend.",
-    text: "The Most Talented Law Firm",
-    button: "Contact us now",
+    title: "Working With You for Legal Excellence",
+    description:
+      "We provide clear, dependable legal guidance tailored to your needs, combining practical expertise with a personal, client-first approach.",
+    button: "CONTACT US NOW",
   },
   {
     images: "portfolio_4",
-    title: "Working with You,",
-    subTitle: "Like a Friend, for Legal Excellence.",
-    text: "The Most Talented Law Firm",
-    button: "Contact us now",
+    title: "Working With You for Legal Excellence",
+    description:
+      "We provide clear, dependable legal guidance tailored to your needs, combining practical expertise with a personal, client-first approach.",
+    button: "CONTACT US NOW",
   },
 ];
 
@@ -50,13 +50,14 @@ const HomePageOne = () => {
   return (
     <Fragment>
       <header className="headerArea">
-        <HeaderTop className="headerTop" />
+        {/* <HeaderTop className="headerTop" /> */}
         <HeaderBotton className="headerBottomArea" />
       </header>
       <HeroSlider sliders={heroSliders} className="heroSliderArea" />
-      <Service className="serviceArea" />
+      <Service className="serviceArea homeServiceArea" />
       <About
-        className="aboutArea"
+        className="aboutArea homeAboutArea"
+        subTitle="Your trusted partner in Cambodian law"
         title="About Us"
         images={about}
         signature={signature}
